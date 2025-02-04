@@ -1,3 +1,15 @@
+/********************************************************************************
+ * WEB322 – Assignment 02
+ *
+ * I declare that this assignment is my own work in accordance with Seneca's
+ * Academic Integrity Policy:
+ *
+ * https://www.senecapolytechnic.ca/about/policies/academic-integrity-policy.html
+ *
+ * Name: Yevhen Chernytskyi Student ID: 166613232 Date: Mon Feb 3
+ *
+ ********************************************************************************/
+
 const projectData = require("./modules/projects");
 
 projectData.initialize();
