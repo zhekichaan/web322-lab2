@@ -25,7 +25,7 @@ const getProjectById = (projectID) => {
   const result = projects.find((project) => project.id == projectID);
 
   return new Promise((resolve, reject) => {
-    if (result) resolve(projects);
+    if (result) resolve(result);
     else reject(`Unable to find a project with id: ${projectID}.`);
   });
 };
@@ -36,27 +36,10 @@ const getProjectsBySector = (sector) => {
   );
 
   return new Promise((resolve, reject) => {
-    if (result) resolve(projects);
+    if (result.length > 0) resolve(result);
     else reject(`Unable to find a project with sector: ${sector}.`);
   });
 };
-
-initialize();
-
-// getAllProjects().then((data) => {
-//   console.log(data);
-// });
-
-// getProjectById(100)
-//   .then((data) => {
-//     console.log(data);
-//   })
-//   .catch((reason) => {
-//     console.log(reason);
-//   });
-
-// console.log("Get projects by sector: ");
-// console.log(getProjectsBySector("sinks"));
 
 module.exports = {
   initialize,
